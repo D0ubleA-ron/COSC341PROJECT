@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFE9E7"
+    tools:context=".HomeActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/nunito"
+        android:text="Home"
+        android:textColor="#111344"
+        android:textSize="64sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="283dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/nunito"
+        android:text="Hey John! What are you looking for today?"
+        android:textAlignment="center"
+        android:textColor="#111344"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/interestAButton"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#cc7178"
+        android:fontFamily="@font/nunito"
+        android:text="Interest A"
+        android:textAllCaps="false"
+        android:textColor="#EFE9E7"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:cornerRadius="35dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <Button
+        android:id="@+id/interestBButton"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#b35e6f"
+        android:fontFamily="@font/nunito"
+        android:text="Interest B"
+        android:textAllCaps="false"
+        android:textColor="#EFE9E7"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:cornerRadius="35dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/interestAButton" />
+
+    <Button
+        android:id="@+id/interestCButton"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#9e4e68"
+        android:fontFamily="@font/nunito"
+        android:text="Interest C"
+        android:textAllCaps="false"
+        android:textColor="#EFE9E7"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:cornerRadius="35dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/interestBButton" />
+
+    <Button
+        android:id="@+id/interestDButton"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#863c60"
+        android:fontFamily="@font/nunito"
+        android:text="Interest D"
+        android:textAllCaps="false"
+        android:textColor="#EFE9E7"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:cornerRadius="35dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/interestCButton" />
+
+    <Button
+        android:id="@+id/interestEButton"
+        android:layout_width="200dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="16dp"
+        android:backgroundTint="#52154e"
+        android:fontFamily="@font/nunito"
+        android:text="I don't know"
+        android:textAllCaps="false"
+        android:textColor="#EFE9E7"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:cornerRadius="35dip"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/interestDButton" />
+
+    <ImageButton
+        android:id="@+id/homeButton"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:scaleX=".60"
+        android:scaleY=".60"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/home" />
+
+    <ImageButton
+        android:id="@+id/messagesButton"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="8dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:scaleX=".60"
+        android:scaleY=".60"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/homeButton"
+        app:srcCompat="@drawable/messages" />
+
+    <ImageButton
+        android:id="@+id/settingsButton"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:scaleX=".60"
+        android:scaleY=".60"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/settings" />
+
+    <ImageButton
+        android:id="@+id/matchesButton"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginEnd="8dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:scaleX=".60"
+        android:scaleY=".60"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/settingsButton"
+        app:srcCompat="@drawable/matches" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
