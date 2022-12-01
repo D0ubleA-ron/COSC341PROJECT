@@ -1,3 +1,39 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Grandpals</string>
+    <string-array name="names">
+        <item>Steven</item>
+        <item>Marley</item>
+        <item>Sam</item>
+        <item>Paul</item>
+        <item>Jess</item>
+        <item>Alex</item>
+        <item>Joe</item>
+    </string-array>
+    <string-array name="tasks">
+        <item>Help baking bread</item>
+        <item>Wants life advice</item>
+        <item>Teach Overwatch 2</item>
+        <item>Help install TV</item>
+        <item>Fix your computer</item>
+        <item>Board game partner</item>
+        <item>Wants to bake cookies</item>
+    </string-array>
+    <string-array name="ages">
+        <item>31</item>
+        <item>25</item>
+        <item>27</item>
+        <item>39</item>
+        <item>23</item>
+        <item>24</item>
+        <item>53</item>
+    </string-array>
+    <string-array name="locations">
+        <item>Lake Country, BC. 17km away</item>
+        <item>Lake Country, BC. 20km away</item>
+        <item>Vernon, BC. 45km away</item>
+        <item>Kelowna, BC. 3km away</item>
+        <item>Kelowna, BC. 2km away</item>
+        <item>Kelowna, BC. 1km away</item>
+        <item>Kelowna, BC. 5km away</item>
+    </string-array>
 </resources>
