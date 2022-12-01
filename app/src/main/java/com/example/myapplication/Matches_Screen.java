@@ -17,7 +17,7 @@ public class Matches_Screen extends AppCompatActivity {
     }
 
     public void ButtonClick(View view) {    // a profile image was clicked
-        Intent intent = new Intent(this, HomeActivity.class);       // CHANGE TO THE MATCHING SCREEN CLASS
+        Intent intent = new Intent(this, Matching_Screen.class);
         int index = Integer.parseInt(view.getTag().toString());
         intent.putExtra("index", index);   // put the profile's index as the extra
         startActivity(intent);

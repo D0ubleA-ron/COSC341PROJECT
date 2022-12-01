@@ -18,9 +18,8 @@ public class HomeActivity extends AppCompatActivity {
     }
 
     public void ButtonClick(View view) {    // an interest button was pressed
-        Intent intent = new Intent(this, HomeActivity.class);   // CHANGE TO THE MATCHING SCREEN CLASS
+        Intent intent = new Intent(this, Matching_Screen.class);
         intent.putExtra("index", 6);
-        //intent = new Intent(this, Matches_Screen.class);
         startActivity(intent);
     }
 

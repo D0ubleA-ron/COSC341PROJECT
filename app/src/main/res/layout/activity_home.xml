@@ -139,7 +139,6 @@
         android:layout_width="96dp"
         android:layout_height="96dp"
         android:background="#00FFFFFF"
-        android:onClick="NavBarClick"
         android:scaleType="fitCenter"
         android:scaleX=".60"
         android:scaleY=".60"

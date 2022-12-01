@@ -8,7 +8,7 @@
     tools:context=".Matching_Screen">
 
     <TextView
-        android:id="@+id/textView20"
+        android:id="@+id/locationTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
@@ -22,7 +22,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView21"
+        android:id="@+id/taskTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
@@ -53,7 +53,7 @@
         android:id="@+id/matchesButton2"
         android:layout_width="96dp"
         android:layout_height="96dp"
-        android:layout_marginEnd="12dp"
+        android:layout_marginEnd="9dp"
         android:background="#00FFFFFF"
         android:onClick="NavBarClick"
         android:scaleType="fitCenter"
@@ -120,7 +120,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textView18"
+        android:id="@+id/nameAgeTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
@@ -135,17 +135,19 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="172dp"
-        android:layout_marginEnd="44dp"
+        android:id="@+id/profileImageView"
+        android:layout_width="350dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="6dp"
+        android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/match_1" />
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/taskTextView"
+        app:srcCompat="@drawable/person_6" />
 
     <ImageButton
-        android:id="@+id/imageButton9"
+        android:id="@+id/rejectButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
@@ -153,11 +155,11 @@
         android:layout_marginTop="7dp"
         android:background="#00FFFFFF"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/profileImageView"
         app:srcCompat="@drawable/group_7" />
 
     <ImageButton
-        android:id="@+id/imageButton10"
+        android:id="@+id/acceptButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="284dp"
@@ -165,7 +167,7 @@
         android:background="#00FFFFFF"
         android:onClick="TickBtnClick"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/profileImageView"
         app:srcCompat="@drawable/group_8" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
