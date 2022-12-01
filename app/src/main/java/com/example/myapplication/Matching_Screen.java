@@ -40,13 +40,7 @@ public class Matching_Screen extends AppCompatActivity {
         ((TextView)findViewById(R.id.nameAgeTextView)).setText(name + ", " + age);
         ((TextView)findViewById(R.id.taskTextView)).setText(task);
         ((TextView)findViewById(R.id.locationTextView)).setText(location);
-        updateImage(index);
-    }
-
-    public void updateImage(int index) {    // add rounding/border code
-        Drawable img = getDrawable(imageIds[index]);
-
-        ((ImageView)findViewById(R.id.profileImageView)).setImageDrawable(img);
+        ((ImageView)findViewById(R.id.profileImageView)).setImageDrawable(getDrawable(imageIds[index]));
     }
 
     public void ButtonClick(View view) {    // accept/reject was clicked
