@@ -151,9 +151,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
-        android:onClick="XBtnClick"
         android:layout_marginTop="7dp"
         android:background="#00FFFFFF"
+        android:onClick="ButtonClick"
+        android:tag="reject"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileImageView"
         app:srcCompat="@drawable/group_7" />
@@ -165,7 +166,8 @@
         android:layout_marginStart="284dp"
         android:layout_marginTop="7dp"
         android:background="#00FFFFFF"
-        android:onClick="TickBtnClick"
+        android:onClick="ButtonClick"
+        android:tag="accept"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/profileImageView"
         app:srcCompat="@drawable/group_8" />

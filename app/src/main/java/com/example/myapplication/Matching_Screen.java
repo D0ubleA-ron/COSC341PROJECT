@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Matching_Screen extends AppCompatActivity {
     int[] imageIds = new int[] {
@@ -42,10 +43,18 @@ public class Matching_Screen extends AppCompatActivity {
         updateImage(index);
     }
 
-    public void updateImage(int index) {
+    public void updateImage(int index) {    // add rounding/border code
         Drawable img = getDrawable(imageIds[index]);
 
         ((ImageView)findViewById(R.id.profileImageView)).setImageDrawable(img);
+    }
+
+    public void ButtonClick(View view) {    // accept/reject was clicked
+        if (view.getTag().toString().equals("accept")) {
+            Toast.makeText(this, "add accept functionality", Toast.LENGTH_SHORT).show();
+        } else {
+            Toast.makeText(this, "add reject functionality", Toast.LENGTH_SHORT).show();
+        }
     }
 
     public void NavBarClick(View view) {    // a navbar button was clicked
