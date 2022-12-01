@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFE9E7"
+    tools:context=".Matching_Screen">
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="108dp"
+        android:fontFamily="@font/nunito"
+        android:text="Kelowna, BC 5km away"
+        android:textColor="#111344"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView21"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="144dp"
+        android:fontFamily="@font/nunito"
+        android:text="Wants to bake cookies"
+        android:textColor="#111344"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/settingsButton2"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:background="#00FFFFFF"
+        android:onClick="NavBarClick"
+        android:scaleType="fitCenter"
+        android:scaleX=".60"
+        android:scaleY=".60"
+        android:tag="settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/settings" />
+
+    <ImageButton
+        android:id="@+id/matchesButton2"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginEnd="12dp"
+        android:background="#00FFFFFF"
+        android:onClick="NavBarClick"
+        android:scaleType="fitCenter"
+        android:scaleX=".60"
+        android:scaleY=".60"
+        android:tag="matches"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/settingsButton2"
+        app:srcCompat="@drawable/matches" />
+
+    <ImageButton
+        android:id="@+id/messagesButton2"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="4dp"
+        android:background="#00FFFFFF"
+        android:onClick="NavBarClick"
+        android:scaleType="fitCenter"
+        android:scaleX=".60"
+        android:scaleY=".60"
+        android:tag="messages"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/matchesButton2"
+        app:layout_constraintHorizontal_bias="0.363"
+        app:layout_constraintStart_toEndOf="@+id/homeButton2"
+        app:srcCompat="@drawable/messages" />
+
+    <ImageButton
+        android:id="@+id/homeButton2"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:background="#00FFFFFF"
+        android:onClick="NavBarClick"
+        android:scaleType="fitCenter"
+        android:scaleX=".60"
+        android:scaleY=".60"
+        android:tag="home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/matchesButton2"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/home" />
+
+    <View
+        android:id="@+id/view2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="44dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito"
+        android:text="Find New Friends"
+        android:textColor="#111344"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/nunito"
+        android:text="Joe, 82"
+        android:textColor="#111344"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="184dp"
+        android:layout_marginEnd="44dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/match_1" />
+
+    <ImageButton
+        android:id="@+id/imageButton9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:onClick="XBtnClick"
+        android:layout_marginTop="7dp"
+        android:background="#00FFFFFF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:srcCompat="@drawable/group_7" />
+
+    <ImageButton
+        android:id="@+id/imageButton10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="284dp"
+        android:layout_marginTop="7dp"
+        android:background="#00FFFFFF"
+        android:onClick="TickBtnClick"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
+        app:srcCompat="@drawable/group_8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
