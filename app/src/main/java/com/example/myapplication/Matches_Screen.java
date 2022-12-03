@@ -18,6 +18,7 @@ public class Matches_Screen extends AppCompatActivity {
             R.id.jessLayout,
             R.id.alexLayout };
 
+    // got these coords using code from this vid and getX/getY: https://www.youtube.com/watch?v=L3kBvM-fQ74
     int[][] coords = new int[][] {
             new int[] { 17, 193 },
             new int[] { 568, 193 },
@@ -36,8 +37,8 @@ public class Matches_Screen extends AppCompatActivity {
         ArrayList<Integer> matches = GrandpalsData.getInstance().getMatches();
         for (int i = 0; i < matches.size(); i++) {     // populate matches properly
             View v = findViewById(ids[matches.get(i)]);
-            v.setX(coords[i][0]);
-            v.setY(coords[i][1]);
+            v.setX(coords[i][0]);   // set X based on our pre-defined locations
+            v.setY(coords[i][1]);   // set Y based on our pre-defined locations
             v.setVisibility(View.VISIBLE);
         }
     }
