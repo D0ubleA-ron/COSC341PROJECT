@@ -12,6 +12,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+import java.util.Random;
+
 public class Matching_Screen extends AppCompatActivity {
     int[] imageIds = new int[] {
             R.drawable.person_0,
@@ -22,6 +25,8 @@ public class Matching_Screen extends AppCompatActivity {
             R.drawable.person_5,
             R.drawable.person_6 };
 
+    int index = -1; // will be updated in onCreate
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,7 +34,42 @@ public class Matching_Screen extends AppCompatActivity {
 
         // unpack bundle and get corresponding profile info
         Bundle bundle = getIntent().getExtras();
-        int index = bundle.getInt("index");
+        index = bundle.getInt("index");
+
+        loadIndex();    // load info based on the match id
+    }
+
+    public void ButtonClick(View view) {    // accept/reject was clicked
+        GrandpalsData data = GrandpalsData.getInstance();
+        ArrayList<Integer> matches = data.getMatches();
+        ArrayList<Integer> convos = data.getConvos();
+        if (index != 6) {   // remove from matches page regardless of whether accept or reject was clicked
+            //matches.remove(index);
+            matches.remove(Integer.valueOf(index));
+            data.setMatches(matches);   // update the data
+        }
+        if (view.getTag().toString().equals("accept")) {    // add the id to the list of convos
+            convos.add(index);
+            data.setConvos(convos);     // update the data
+        } else {
+            Toast.makeText(this, "add reject functionality", Toast.LENGTH_SHORT).show();
+        }
+
+        if (matches.size() > 0) {   // load new match
+            index = matches.get(new Random().nextInt(matches.size()));
+            loadIndex();
+        }
+        else {  // no more matches, so blank out the screen
+            ((TextView)findViewById(R.id.nameAgeTextView)).setText("");
+            ((TextView)findViewById(R.id.taskTextView)).setText("");
+            ((TextView)findViewById(R.id.locationTextView)).setText("");
+            ((ImageView)findViewById(R.id.profileImageView)).setVisibility(View.INVISIBLE);
+            Toast.makeText(this, "You've run out of matches!", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    public void loadIndex() {
+        // get resources
         Resources res = getResources();
         String name = res.getStringArray(R.array.names)[index];
         String task = res.getStringArray(R.array.tasks)[index];
@@ -41,14 +81,6 @@ public class Matching_Screen extends AppCompatActivity {
         ((TextView)findViewById(R.id.taskTextView)).setText(task);
         ((TextView)findViewById(R.id.locationTextView)).setText(location);
         ((ImageView)findViewById(R.id.profileImageView)).setImageDrawable(getDrawable(imageIds[index]));
-    }
-
-    public void ButtonClick(View view) {    // accept/reject was clicked
-        if (view.getTag().toString().equals("accept")) {
-            Toast.makeText(this, "add accept functionality", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(this, "add reject functionality", Toast.LENGTH_SHORT).show();
-        }
     }
 
     public void NavBarClick(View view) {    // a navbar button was clicked

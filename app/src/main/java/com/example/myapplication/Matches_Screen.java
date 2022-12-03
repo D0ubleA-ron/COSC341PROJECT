@@ -5,15 +5,41 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
-import android.widget.ImageButton;
+import android.widget.LinearLayout;
+
+import java.util.ArrayList;
 
 public class Matches_Screen extends AppCompatActivity {
+    int[] ids = new int[] {
+            R.id.stevenLayout,
+            R.id.marleyLayout,
+            R.id.samLayout,
+            R.id.paulLayout,
+            R.id.jessLayout,
+            R.id.alexLayout };
+
+    int[][] coords = new int[][] {
+            new int[] { 17, 193 },
+            new int[] { 568, 193 },
+            new int[] { 17, 688 },
+            new int[] { 568, 688 },
+            new int[] { 17, 1183 },
+            new int[] { 568, 1183 } };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_matches_screen);
+        //setContentView(R.layout.activity_matches_screen);
+        //setContentView(R.layout.activity_matches_screen_tablelayout);
+        setContentView(R.layout.activity_matches_screen_fixedlayout);
+
+        ArrayList<Integer> matches = GrandpalsData.getInstance().getMatches();
+        for (int i = 0; i < matches.size(); i++) {     // populate matches properly
+            View v = findViewById(ids[matches.get(i)]);
+            v.setX(coords[i][0]);
+            v.setY(coords[i][1]);
+            v.setVisibility(View.VISIBLE);
+        }
     }
 
     public void ButtonClick(View view) {    // a profile image was clicked
