@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -30,6 +31,11 @@ public class conversationScreen extends AppCompatActivity {
             v.setVisibility(View.GONE);
 
         }
+    }
+
+    public void ConvoClick(View view) {
+        int id = Integer.parseInt(view.getTag().toString());
+        Toast.makeText(this, "id: " + id + ", implement this function", Toast.LENGTH_SHORT).show();
     }
 
     public void NavBarClick(View view) {    // a navbar button was clicked

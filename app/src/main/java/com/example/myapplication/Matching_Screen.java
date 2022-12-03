@@ -59,15 +59,24 @@ public class Matching_Screen extends AppCompatActivity {
             loadIndex();
         }
         else {  // no more matches, so blank out the screen
-            ((TextView)findViewById(R.id.nameAgeTextView)).setText("");
-            ((TextView)findViewById(R.id.taskTextView)).setText("");
-            ((TextView)findViewById(R.id.locationTextView)).setText("");
-            ((ImageView)findViewById(R.id.profileImageView)).setVisibility(View.INVISIBLE);
-            Toast.makeText(this, "You've run out of matches!", Toast.LENGTH_SHORT).show();
+            runOut();
         }
     }
 
     public void loadIndex() {
+        // check if valid index (if not showing up on the convos page, we can load it)
+        ArrayList<Integer> convos = GrandpalsData.getInstance().getConvos();
+        ArrayList<Integer> matches = GrandpalsData.getInstance().getMatches();
+        if (!convos.contains(index)) {
+            if (matches.size() > 0) {   // load new match
+                index = matches.get(new Random().nextInt(matches.size()));
+            }
+            else {  // no more matches, so blank out the screen
+                runOut();
+                return;
+            }
+        }
+
         // get resources
         Resources res = getResources();
         String name = res.getStringArray(R.array.names)[index];
@@ -80,6 +89,14 @@ public class Matching_Screen extends AppCompatActivity {
         ((TextView)findViewById(R.id.taskTextView)).setText(task);
         ((TextView)findViewById(R.id.locationTextView)).setText(location);
         ((ImageView)findViewById(R.id.profileImageView)).setImageDrawable(getDrawable(imageIds[index]));
+    }
+
+    public void runOut() {
+        ((TextView)findViewById(R.id.nameAgeTextView)).setText("");
+        ((TextView)findViewById(R.id.taskTextView)).setText("");
+        ((TextView)findViewById(R.id.locationTextView)).setText("");
+        ((ImageView)findViewById(R.id.profileImageView)).setVisibility(View.INVISIBLE);
+        Toast.makeText(this, "You've run out of matches!", Toast.LENGTH_SHORT).show();
     }
 
     public void NavBarClick(View view) {    // a navbar button was clicked

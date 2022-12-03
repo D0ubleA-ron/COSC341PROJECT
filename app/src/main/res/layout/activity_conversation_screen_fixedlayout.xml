@@ -35,7 +35,8 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/stevenLayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="150dp"
+                android:onClick="ConvoClick"
                 android:tag="0">
 
                 <View
@@ -47,8 +48,10 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView5"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
                     app:cardCornerRadius="90dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent">
@@ -103,7 +106,8 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/marleyLayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="150dp"
+                android:onClick="ConvoClick"
                 android:tag="1">
 
                 <View
@@ -115,8 +119,10 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView3"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
                     app:cardBackgroundColor="#00FFFFFF"
                     app:cardCornerRadius="90dp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -172,7 +178,8 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/samLayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="150dp"
+                android:onClick="ConvoClick"
                 android:tag="2">
 
                 <View
@@ -184,8 +191,10 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView6"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
                     app:cardBackgroundColor="#00FFFFFF"
                     app:cardCornerRadius="90dp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -241,7 +250,8 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/paulLayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="150dp"
+                android:onClick="ConvoClick"
                 android:tag="3">
 
                 <View
@@ -253,8 +263,10 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView7"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
                     app:cardBackgroundColor="#00FFFFFF"
                     app:cardCornerRadius="90dp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -311,7 +323,8 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/jessLayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="150dp"
+                android:onClick="ConvoClick"
                 android:tag="4">
 
                 <View
@@ -323,8 +336,10 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView4"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
                     app:cardBackgroundColor="#00FFFFFF"
                     app:cardCornerRadius="90dp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -380,7 +395,8 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/alexLayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="150dp"
+                android:onClick="ConvoClick"
                 android:tag="5">
 
                 <View
@@ -392,8 +408,10 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView8"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
                     app:cardBackgroundColor="#00FFFFFF"
                     app:cardCornerRadius="90dp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -449,7 +467,8 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/joeLayout"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="150dp"
+                android:onClick="ConvoClick"
                 android:tag="6">
 
                 <View
@@ -461,8 +480,10 @@
 
                 <androidx.cardview.widget.CardView
                     android:id="@+id/cardView9"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
                     app:cardBackgroundColor="#00FFFFFF"
                     app:cardCornerRadius="90dp"
                     app:layout_constraintStart_toStartOf="parent"
