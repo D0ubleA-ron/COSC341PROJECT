@@ -44,12 +44,11 @@ public class Matching_Screen extends AppCompatActivity {
         ArrayList<Integer> matches = data.getMatches();
         ArrayList<Integer> convos = data.getConvos();
         if (index != 6) {   // remove from matches page regardless of whether accept or reject was clicked
-            //matches.remove(index);
             matches.remove(Integer.valueOf(index));
             data.setMatches(matches);   // update the data
         }
         if (view.getTag().toString().equals("accept")) {    // add the id to the list of convos
-            convos.add(index);
+            convos.remove(Integer.valueOf(index));  // i know this looks backwards but we do need to remove the index
             data.setConvos(convos);     // update the data
         } else {
             Toast.makeText(this, "add reject functionality", Toast.LENGTH_SHORT).show();
@@ -88,8 +87,8 @@ public class Matching_Screen extends AppCompatActivity {
         Intent intent;
         if (tag.equals("home"))     // home was clicked
             intent = new Intent(this, HomeActivity.class);
-//        else if (tag.equals("messages"))    // messages was clicked
-//            intent = new Intent(this, );
+        else if (tag.equals("messages"))    // messages was clicked
+            intent = new Intent(this, conversationScreen.class);
         else if (tag.equals("matches")) // matches was clicked
             intent = new Intent(this, Matches_Screen.class);
         else

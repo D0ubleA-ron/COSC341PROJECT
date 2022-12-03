@@ -8,6 +8,8 @@ public class GrandpalsData {
     public GrandpalsData() {
         for (int i : new int[] {0, 1, 2, 3, 4, 5})
             matches.add(i);
+        for (int i : new int[] {0, 1, 2, 3, 4, 5, 6})
+            convos.add(i);
     }
     public ArrayList<Integer> getMatches() {
         return matches;

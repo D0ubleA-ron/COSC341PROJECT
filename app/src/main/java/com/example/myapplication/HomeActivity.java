@@ -28,12 +28,12 @@ public class HomeActivity extends AppCompatActivity {
         Intent intent;
         if (tag.equals("home"))     // home was clicked
             intent = new Intent(this, HomeActivity.class);
-//        else if (tag.equals("messages"))    // messages was clicked
-//            intent = new Intent(this, );
+        else if (tag.equals("messages"))    // messages was clicked
+            intent = new Intent(this, conversationScreen.class);
         else if (tag.equals("matches")) // matches was clicked
             intent = new Intent(this, Matches_Screen.class);
         else
-            intent = new Intent(this, Matches_Screen.class);
+            intent = new Intent(this, HomeActivity.class);
 //        else  // settings was clicked
 //            intent = new Intent(this, );
         startActivity(intent);
