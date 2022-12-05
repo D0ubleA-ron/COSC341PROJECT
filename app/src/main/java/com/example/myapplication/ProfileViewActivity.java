@@ -23,7 +23,13 @@ public class ProfileViewActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profile_view);
+
+        // load an appropriate page based on whether or not the profile has been created yet
+        boolean profileCreated = GrandpalsData.getInstance().getCreatedStatus();
+        if (profileCreated)
+            setContentView(R.layout.activity_profile_view);
+        else
+            setContentView(R.layout.activity_profile_view_first_time);
 
         Button edit_button = (Button) findViewById(R.id.edit_button);
         edit_button.setOnClickListener(new View.OnClickListener() {
@@ -66,7 +72,7 @@ public class ProfileViewActivity extends AppCompatActivity {
                 }
             }
         } catch (IOException e) {
-            Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+            //Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
 

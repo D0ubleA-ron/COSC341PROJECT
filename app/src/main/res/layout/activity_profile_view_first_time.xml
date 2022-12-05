@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFE9E7"
+    tools:context=".ProfileViewActivity">
+
+
+    <TextView
+        android:id="@+id/textView29"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nunito"
+        android:text="My Profile"
+        android:textColor="#111344"
+        android:textSize="32sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/view8"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="44dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/edit_button"
+        android:layout_width="250dp"
+        android:layout_height="65dp"
+        android:backgroundTint="#FF52154E"
+        android:fontFamily="@font/nunito"
+        android:text="Create profile!"
+        android:textAllCaps="false"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:cornerRadius="35dp"
+        app:layout_constraintBottom_toTopOf="@+id/messagesButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/homeButton"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:background="#00FFFFFF"
+        android:onClick="NavBarClick"
+        android:scaleType="fitCenter"
+        android:scaleX=".60"
+        android:scaleY=".60"
+        android:tag="home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/home" />
+
+    <ImageButton
+        android:id="@+id/messagesButton"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginStart="9dp"
+        android:background="#00FFFFFF"
+        android:onClick="NavBarClick"
+        android:scaleType="fitCenter"
+        android:scaleX=".60"
+        android:scaleY=".60"
+        android:tag="messages"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/homeButton"
+        app:srcCompat="@drawable/messages" />
+
+    <ImageButton
+        android:id="@+id/matchesButton"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_marginEnd="9dp"
+        android:background="#00FFFFFF"
+        android:onClick="NavBarClick"
+        android:scaleType="fitCenter"
+        android:scaleX=".60"
+        android:scaleY=".60"
+        android:tag="matches"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/settingsButton"
+        app:srcCompat="@drawable/matches" />
+
+    <ImageButton
+        android:id="@+id/settingsButton"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:background="#00FFFFFF"
+        android:scaleType="fitCenter"
+        android:scaleX=".60"
+        android:scaleY=".60"
+        android:tag="settings"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/settings_fill" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

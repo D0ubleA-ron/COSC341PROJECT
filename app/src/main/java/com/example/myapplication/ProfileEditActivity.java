@@ -115,6 +115,7 @@ public class ProfileEditActivity extends AppCompatActivity {
                 if (isNumeric(age) && name.length() > 0) {
                     Intent intent = new Intent(ProfileEditActivity.this, ProfileViewActivity.class);
                     save();
+                    GrandpalsData.getInstance().setCreatedStatus(true);
                     startActivity(intent);
                 } else if (!isNumeric(age)) {
                     Toast.makeText(context, "Please enter a valid age", Toast.LENGTH_SHORT).show();
