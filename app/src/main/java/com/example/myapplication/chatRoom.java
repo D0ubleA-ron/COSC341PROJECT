@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -13,6 +14,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class chatRoom extends AppCompatActivity {
+    int[] imageIds = new int[] {
+            R.drawable.person_0,
+            R.drawable.person_1,
+            R.drawable.person_2,
+            R.drawable.person_3,
+            R.drawable.person_4,
+            R.drawable.person_5,
+            R.drawable.person_6 };
 
     EditText message;
     ImageButton send;
@@ -64,5 +73,9 @@ public class chatRoom extends AppCompatActivity {
             }
         });
 
+        // set up initial profile info/images
+        int id = getIntent().getExtras().getInt("id");
+        userName.setText(getResources().getStringArray(R.array.names)[id]);
+        userImage.setImageDrawable(getDrawable(imageIds[id]));
     }
 }

@@ -35,7 +35,10 @@ public class conversationScreen extends AppCompatActivity {
 
     public void ConvoClick(View view) {
         int id = Integer.parseInt(view.getTag().toString());
-        Toast.makeText(this, "id: " + id + ", implement this function", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, chatRoom.class);
+        intent.putExtra("id", id);
+        startActivity(intent);
+        //Toast.makeText(this, "id: " + id + ", implement this function", Toast.LENGTH_SHORT).show();
     }
 
     public void NavBarClick(View view) {    // a navbar button was clicked
