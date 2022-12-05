@@ -2,9 +2,13 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.res.Resources;
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -30,6 +34,7 @@ public class chatRoom extends AppCompatActivity {
     androidx.appcompat.widget.Toolbar toolbarchatroom;
     ImageView userImage;
     TextView userName;
+    TextView senderText;
 
     private String enteredMessage;
 
@@ -50,6 +55,7 @@ public class chatRoom extends AppCompatActivity {
         userName = findViewById(R.id.user_name);
         userImage = findViewById(R.id.chatRoomUserProfilepic);
         back = findViewById(R.id.backToConversationScreen);
+        senderText = findViewById(R.id.textView31);
 
 
         back.setOnClickListener(new View.OnClickListener() {
@@ -68,6 +74,8 @@ public class chatRoom extends AppCompatActivity {
                 if(enteredMessage.isEmpty()){
                     Toast.makeText(getApplicationContext(), "Please Enter Something", Toast.LENGTH_SHORT).show();
                 } else {
+                    senderText.setText(enteredMessage);
+                    senderText.setBackground(ContextCompat.getDrawable(chatRoom.this, R.drawable.senderchatdrawable));
                     message.setText(null);
                 }
             }

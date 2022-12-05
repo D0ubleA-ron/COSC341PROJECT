@@ -127,7 +127,36 @@
 
     </androidx.cardview.widget.CardView>
 
+    <TextView
+        android:id="@+id/textView30"
+        android:layout_width="134dp"
+        android:layout_height="74dp"
+        android:layout_alignTop="@id/toolBarChatRoom"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/recieverchatdrawable"
+        android:fontFamily="@font/nunito"
+        android:text="Hey, how is it going?"
+        android:paddingTop="4dp"
+        android:paddingLeft="4dp"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
 
+    <TextView
+        android:id="@+id/textView31"
+        android:layout_width="134dp"
+        android:layout_height="74dp"
+        android:layout_alignTop="@id/textView30"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="80dp"
+        android:fontFamily="@font/nunito"
+        android:text=""
+        android:paddingTop="4dp"
+        android:paddingLeft="4dp"
+        android:paddingRight="4dp"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
 
 
 </RelativeLayout>
