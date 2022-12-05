@@ -43,10 +43,11 @@ public class Matching_Screen extends AppCompatActivity {
         GrandpalsData data = GrandpalsData.getInstance();
         ArrayList<Integer> matches = data.getMatches();
         ArrayList<Integer> convos = data.getConvos();
-        if (index != 6) {   // remove from matches page regardless of whether accept or reject was clicked
-            matches.remove(Integer.valueOf(index));
-            data.setMatches(matches);   // update the data
-        }
+
+        // remove from matches page regardless of whether accept or reject was clicked
+        matches.remove(Integer.valueOf(index));
+        data.setMatches(matches);   // update the data
+
         if (view.getTag().toString().equals("accept")) {    // add the id to the list of convos
             convos.remove(Integer.valueOf(index));  // i know this looks backwards but we do need to remove the index
             data.setConvos(convos);     // update the data
@@ -62,10 +63,9 @@ public class Matching_Screen extends AppCompatActivity {
     }
 
     public void loadIndex() {
-        // check if valid index (if not showing up on the convos page, we can load it)
-        ArrayList<Integer> convos = GrandpalsData.getInstance().getConvos();
+        // check if valid index (if not showing up in the matches list, we can show it)
         ArrayList<Integer> matches = GrandpalsData.getInstance().getMatches();
-        if (!convos.contains(index)) {
+        if (!matches.contains(index)) {
             if (matches.size() > 0) {   // load new match
                 index = matches.get(new Random().nextInt(matches.size()));
             }
