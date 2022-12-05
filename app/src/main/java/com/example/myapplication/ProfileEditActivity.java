@@ -140,7 +140,7 @@ public class ProfileEditActivity extends AppCompatActivity {
             if (uris[0] != null) output.write((uris[0].toString() + '¶').getBytes());
             if (uris[1] != null) output.write((uris[1].toString() + '¶').getBytes());//----------
             if (uris[2] != null) output.write((uris[2].toString() + '¶').getBytes());
-            if (uris[3] != null) output.write(uris[3].toString().getBytes());
+            if (uris[3] != null) output.write((uris[3].toString() + '¶').getBytes());
 
             output.close();
 
