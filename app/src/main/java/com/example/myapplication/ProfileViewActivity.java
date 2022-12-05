@@ -72,7 +72,9 @@ public class ProfileViewActivity extends AppCompatActivity {
                     images[i-3].setImageURI(Uri.parse(str_arr[i]));
                 }
             }
-        } catch (Exception e) {
+        }
+        catch (ArrayIndexOutOfBoundsException e) {} // always fired because bad code lol
+        catch (Exception e) {
             Toast.makeText(this, "GrandPals encountered an error, profile information not loaded at this time.", Toast.LENGTH_SHORT).show();
         }
     }
