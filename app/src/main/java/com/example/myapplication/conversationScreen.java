@@ -49,10 +49,8 @@ public class conversationScreen extends AppCompatActivity {
             intent = new Intent(this, Matches_Screen.class);
         else if (tag.equals("settings")) // settings was clicked
             intent = new Intent(this, ProfileViewActivity.class);
-        else
-            intent = new Intent(this, HomeActivity.class);
-//        else  // settings was clicked
-//            intent = new Intent(this, );
+        else  // settings was clicked
+            intent = new Intent(this, ProfileViewActivity.class);
         startActivity(intent);
     }
 }

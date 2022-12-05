@@ -50,9 +50,7 @@ public class Matching_Screen extends AppCompatActivity {
         if (view.getTag().toString().equals("accept")) {    // add the id to the list of convos
             convos.remove(Integer.valueOf(index));  // i know this looks backwards but we do need to remove the index
             data.setConvos(convos);     // update the data
-        } else {
-            Toast.makeText(this, "add reject functionality", Toast.LENGTH_SHORT).show();
-        }
+        }   // don't actually need to do anything for reject because we've already removed them from potential matches
 
         if (matches.size() > 0) {   // load new match
             index = matches.get(new Random().nextInt(matches.size()));
@@ -110,10 +108,8 @@ public class Matching_Screen extends AppCompatActivity {
             intent = new Intent(this, Matches_Screen.class);
         else if (tag.equals("settings")) // settings was clicked
             intent = new Intent(this, ProfileViewActivity.class);
-        else
-            intent = new Intent(this, HomeActivity.class);
-//        else  // settings was clicked
-//            intent = new Intent(this, );
+        else  // settings was clicked
+            intent = new Intent(this, ProfileViewActivity.class);
         startActivity(intent);
     }
 }
