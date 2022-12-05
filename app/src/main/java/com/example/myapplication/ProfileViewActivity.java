@@ -39,7 +39,8 @@ public class ProfileViewActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        update_display();
+        if (profileCreated)
+            update_display();
     }
 
     public void update_display() {
@@ -71,8 +72,8 @@ public class ProfileViewActivity extends AppCompatActivity {
                     images[i-3].setImageURI(Uri.parse(str_arr[i]));
                 }
             }
-        } catch (IOException e) {
-            //Toast.makeText(this, e.getMessage(), Toast.LENGTH_SHORT).show();
+        } catch (Exception e) {
+            Toast.makeText(this, "GrandPals encountered an error, profile information not loaded at this time.", Toast.LENGTH_SHORT).show();
         }
     }
 
