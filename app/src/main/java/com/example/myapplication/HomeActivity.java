@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
+import java.util.Random;
+
 public class HomeActivity extends AppCompatActivity {
 
     @Override
@@ -19,7 +21,19 @@ public class HomeActivity extends AppCompatActivity {
 
     public void ButtonClick(View view) {    // an interest button was pressed
         Intent intent = new Intent(this, Matching_Screen.class);
-        intent.putExtra("index", 6);
+        String text = ((Button)view).getText().toString().toLowerCase();
+        int index = -1;
+        if (text.equals("help"))
+            index = new int[] {3, 4}[new Random().nextInt(2)];
+        else if (text.equals("baking"))
+            index = new int[] {0, 6}[new Random().nextInt(2)];
+        else if (text.equals("conversation"))
+            index = new int[] {1, 5}[new Random().nextInt(2)];
+        else if (text.equals("technology"))
+            index = new int[] {2, 4}[new Random().nextInt(2)];
+        else
+            index = GrandpalsData.getInstance().getMatches().get(new Random().nextInt(7));
+        intent.putExtra("index", index);
         startActivity(intent);
     }
 
